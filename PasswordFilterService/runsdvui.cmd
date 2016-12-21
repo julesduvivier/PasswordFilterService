@@ -1,0 +1,2 @@
+cd /d "c:\users\agix\documents\visual studio 2015\Projects\PasswordFilterService\PasswordFilterService" &msbuild "PasswordFilterService.csproj" /t:sdvViewer /p:configuration="Debug" /p:platform=Any CPU
+exit %errorlevel% 

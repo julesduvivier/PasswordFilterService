@@ -1,0 +1,41 @@
+﻿<Window x:Class="PasswordFilterService.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PasswordFilterService"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="430" Width="525">
+    <Grid HorizontalAlignment="Right" Margin="-7,0,2,-30" Height="430" VerticalAlignment="Top" Background="#FFF1F1F1" Width="522">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="430*"/>
+            <RowDefinition Height="39*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textBlock" Margin="158,13,157,0" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" FontWeight="Bold" Width="202" TextAlignment="Center"><Run Text="Password Filter Manager"/><LineBreak/><Run/></TextBlock>
+        <TextBox x:Name="textBox_length" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="36" Margin="212,57,0,0" FontSize="13.333"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="19,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontSize="13.333" Height="36"><Run Text="Mimimum "/><Run Text="password"/><Run Text=" "/><Run Text="l"/><Run Text="ength"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="19,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontSize="13.333" Height="36" Text="Password complexity"/>
+        <CheckBox x:Name="checkBox_lowercase" Content="Lowercase" HorizontalAlignment="Left" Margin="212,98,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_uppercase" Content="Uppercase" HorizontalAlignment="Left" Margin="309,98,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_digit" Content="Digit" HorizontalAlignment="Left" Margin="212,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.849,3" IsChecked="True"/>
+        <CheckBox x:Name="checkBox_special" Content="Special" HorizontalAlignment="Left" Margin="309,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.849,3" IsChecked="True"/>
+        <TextBox x:Name="textBox_consecutive" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="36" Margin="212,152,0,0" FontSize="13.333"/>
+        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="19,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontSize="13.333" Height="36" Text="Number maximum of consecutive letters"/>
+        <TextBlock x:Name="textBlock_wordlist" HorizontalAlignment="Left" Margin="19,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="88" FontSize="13.333" Height="36" Text="Wordlist file"/>
+        <TextBox x:Name="textBox_wordlist" HorizontalAlignment="Left" Height="23" Margin="212,281,0,0" VerticalAlignment="Top" Width="212" VerticalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="True" Cursor="None"/>
+        <Button x:Name="button_wordlist" Content="Search" HorizontalAlignment="Left" Margin="446,282,0,0" VerticalAlignment="Top" Width="47" Click="ButtonWordlist_Click"/>
+        <CheckBox x:Name="checkBox_wordlist" Content="Wordlist" HorizontalAlignment="Left" Margin="211,244,0,0" VerticalAlignment="Top" IsChecked="True" Click="EnableWordList"/>
+        <CheckBox x:Name="checkBox_wordlistTokens" Content="Wordlist for tokens&#xD;&#xA;" HorizontalAlignment="Left" Margin="309,244,0,0" VerticalAlignment="Top" IsChecked="True" Click="EnableTokensWordList"/>
+        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="19,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontSize="13.333" Height="36" Text="Enable"/>
+        <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="19,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" FontSize="13.333" Height="36"><Run Text="Tokens "/><Run Text="w"/><Run Text="ordlist file"/></TextBlock>
+        <TextBox x:Name="textBox_tokens" HorizontalAlignment="Left" Height="23" Margin="212,317,0,0" VerticalAlignment="Top" Width="212"  VerticalScrollBarVisibility="Disabled"/>
+        <Button x:Name="button_tokens" Content="Search" HorizontalAlignment="Left" Margin="446,318,0,0" VerticalAlignment="Top" Width="47" Click="ButtonToken_Click"/>
+        <TextBlock x:Name="textBlock1_Copy5" HorizontalAlignment="Left" Margin="19,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" FontSize="13.333" Height="36"><Run Text="Log file"/><Run Text=" directory"/></TextBlock>
+        <TextBox x:Name="textBox_log" HorizontalAlignment="Left" Height="23" Margin="212,202,0,0" VerticalAlignment="Top" Width="212" VerticalScrollBarVisibility="Disabled"/>
+        <Button x:Name="button_log" Content="Search" HorizontalAlignment="Left" Margin="446,203,0,0" VerticalAlignment="Top" Width="47" Click="ButtonLog_Click"/>
+        <Button x:Name="button" Content="Submit" HorizontalAlignment="Left" Margin="212,362,0,0" VerticalAlignment="Top" Width="75" Click="ButtonSubmit_Click"/>
+        <TextBlock x:Name="textBlock_lineWordlist" HorizontalAlignment="Left" Margin="107,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="64"/>
+        <TextBlock x:Name="textBlock_lineTokenWordlist" HorizontalAlignment="Left" Margin="138,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.837,0.376"/>
+
+    </Grid>
+</Window>
