@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/passwordfilterx86_64_v1-1.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/passwordfilterx86_64_v1-2.dll")]
 
 
